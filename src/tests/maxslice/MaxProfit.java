@@ -28,23 +28,19 @@ public class MaxProfit {
 		int q = -1;
 		int p = 0;
 		int maxProfit = 0;
-		while (++q < A.length && p != A.length - 1) {
+		while (++q < A.length) {
+
 			if (p == q) {
-//				while (p != A.length - 1) {
-//					int currentBest = ++p;
-//					while (++currentBest < A.length)
-//						if (A[currentBest] >= A[p])
-//							p = currentBest;
-//				}
-				
-//				if (p == A.length - 1)
-//					break;
-//				else {
+			
+				if (p == A.length - 1)
+					break;
+				else {
 					int currentBest = ++p;
 					while (++currentBest < A.length)
 						if (A[currentBest] >= A[p])
 							p = currentBest;
-//				}
+				}
+				
 			}
 
 			int profit = A[p] - A[q];
