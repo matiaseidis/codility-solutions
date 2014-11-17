@@ -11,6 +11,7 @@ public class MaxProfit {
         test(new int[]{8, 8, 8, 1, 5, 4, 3, 2, 1}, 4);
         test(new int[]{5, 4, 3, 2, 1, 0}, 0);
         test(new int[]{0, 1, 2, 3, 4, 5}, 5);
+        test(new int[]{77, 100, 2, 1, 88, 0, 1, 89}, 89);
         int[] in = new int[100];
         for (int i = 0; i < 100; i++)
             in[i] = 100 - i;
@@ -30,49 +31,17 @@ public class MaxProfit {
     // n = A.lenght
     // t O(n)
     // s O(1)
+//    https://codility.com/c/run/demoYF7MTH-KND
     public int solution(int[] A) {
 
-        if(A == null || A.length == 0) return 0;
-        if(A.length == 1) return Math.max(0, A[0]);
-
-        System.out.println(java.util.Arrays.toString(A));
-
-        int min = 0;
-        int max = 0;
+        int currentMin = 0;
+        int maxProfit = 0;
 
         for (int i = 0; i < A.length; i++) {
-            if (A[i] > A[max])
-                max = i;
-            if (A[i] < A[min])
-                min = i;
+            if (A[i] <= A[currentMin]) currentMin = i;
+            else maxProfit = Math.max(maxProfit, A[i] - A[currentMin]);
         }
 
-        int minBeforeMax = max;
-
-        for (int i = 0; i < max; i++)
-            if (A[i] < A[minBeforeMax]) minBeforeMax = i;
-
-        int maxAfterMin = min;
-
-        for (int i = min; i < A.length; i++)
-            if (A[i] > A[maxAfterMin]) maxAfterMin = i;
-
-        return Math.max(
-                Math.max(
-                        maxProfit(A, min, maxAfterMin),
-                        maxProfit(A, minBeforeMax, max)
-                ),
-                Math.max(
-                        0,
-                        maxProfit(A, Math.min(min, max), Math.max(min, max) - 1)
-                )
-        );
-    }
-
-    int maxProfit(int[] in, int from, int to) {
-        int max = 0;
-        for (int i = from; i <= to; i++)
-            max = Math.max(max, in[to] - in[i]);
-        return max;
+        return maxProfit;
     }
 }
