@@ -32,6 +32,11 @@ public class MaxProfit {
     // s O(1)
     public int solution(int[] A) {
 
+        if(A == null || A.length == 0) return 0;
+        if(A.length == 1) return Math.max(0, A[0]);
+
+        System.out.println(java.util.Arrays.toString(A));
+
         int min = 0;
         int max = 0;
 
