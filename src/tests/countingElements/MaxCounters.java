@@ -1,4 +1,4 @@
-package tests;
+package tests.countingElements;
 //https://codility.com/demo/results/demo77N3UJ-YFR/
 public class MaxCounters {
 	public int[] solution(int N, int[] A) {

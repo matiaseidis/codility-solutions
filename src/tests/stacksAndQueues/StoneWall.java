@@ -1,4 +1,4 @@
-package tests;
+package tests.stacksAndQueues;
 
 import java.util.Stack;
 

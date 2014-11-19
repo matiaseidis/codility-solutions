@@ -1,4 +1,4 @@
-package tests;
+package tests.timeComplexity;
 
 // https://codility.com/demo/results/demoH5RK93-GYW/
 public class PermMissingElem {

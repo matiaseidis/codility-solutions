@@ -1,4 +1,4 @@
-package tests;
+package tests.timeComplexity;
 //https://codility.com/demo/results/demo9292TJ-HFZ/
 public class FrogJmp {
 	public int solution(int X, int Y, int D) {

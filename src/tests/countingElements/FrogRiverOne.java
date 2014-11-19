@@ -1,4 +1,4 @@
-package tests;
+package tests.countingElements;
 
 //https://codility.com/demo/results/demoVHPHYA-XRY/
 public class FrogRiverOne {

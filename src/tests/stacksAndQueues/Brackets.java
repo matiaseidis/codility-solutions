@@ -1,4 +1,4 @@
-package tests;
+package tests.stacksAndQueues;
 //https://codility.com/demo/results/demoS8BDGH-AGD/
 public class Brackets {
     char[] nestCharsIni = new char[]{'{','[','('};

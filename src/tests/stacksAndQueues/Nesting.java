@@ -1,4 +1,4 @@
-package tests;
+package tests.stacksAndQueues;
 // https://codility.com/demo/results/demoBY2HWE-E6E/
 public class Nesting {
 	public int solution(String S) {

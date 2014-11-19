@@ -1,4 +1,4 @@
-package tests;
+package tests.countingElements;
 //https://codility.com/demo/results/demo6PZK3G-4KX/
 public class PermCheck {
 	public int solution(int[] A) {

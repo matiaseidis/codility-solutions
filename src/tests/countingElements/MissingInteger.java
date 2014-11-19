@@ -1,4 +1,4 @@
-package tests;
+package tests.countingElements;
 //https://codility.com/demo/results/demoNQ4BN5-4Q2/
 public class MissingInteger {
 	public int solution(int[] A) {

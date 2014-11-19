@@ -1,4 +1,4 @@
-package tests;
+package tests.sorting;
 //https://codility.com/demo/results/demoEYUJ8V-FVP/
 public class MaxProductOfThree {
 	public int solution(int[] A) {

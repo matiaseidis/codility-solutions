@@ -1,4 +1,4 @@
-package tests;
+package tests.prefixSums;
 //https://codility.com/demo/results/demo4WVDGQ-5VJ/
 public class PassingCars {
 	public int solution(int[] A) {

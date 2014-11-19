@@ -1,4 +1,4 @@
-package tests;
+package tests.sorting;
 //https://codility.com/demo/results/demo5GWM3K-9B5/
 public class Distinct {
 	public int solution(int[] A) {

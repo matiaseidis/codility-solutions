@@ -1,4 +1,4 @@
-package tests;
+package tests.sorting;
 //https://codility.com/demo/results/demoB7EJZT-BD7/
 public class Triangle {
 	public int solution(int[] A) {

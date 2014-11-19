@@ -1,4 +1,4 @@
-package tests;
+package tests.sorting;
 //https://codility.com/demo/results/demo3Y2NXD-A38/
 
 public class NumberOfDiscIntersections {

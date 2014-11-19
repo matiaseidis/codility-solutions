@@ -1,4 +1,4 @@
-package tests;
+package tests.prefixSums;
 //https://codility.com/demo/results/demo64HBRS-MCQ/
 public class CountDiv {
 	 public int solution(int A, int B, int K) {
