@@ -53,6 +53,9 @@ public class GenomicRangeQuery {
         test("CAGCCTA", new int[]{2, 5, 0}, new int[]{4, 5, 6}, new int[]{2, 4, 1});
         test("AC", new int[]{0, 0, 1}, new int[]{0, 1, 1}, new int[]{1, 1, 2});
         test("AAGT", new int[]{0, 2, 2, 3}, new int[]{0, 2, 3, 3}, new int[]{1, 3, 3, 4});
+        test("TC", new int[]{0,0,1}, new int[]{0,1,1}, new int[]{4,2,2});
+        test("TTCA", new int[]{0, 0, 0, 1}, new int[]{0, 1, 2, 2}, new int[]{4, 4, 2, 2});
+        test("TTTATTTT", new int[]{0, 0, 3, 4}, new int[]{2, 3, 7, 7}, new int[]{4, 1, 1, 4});
     }
 
     private static void test(String S, int[] P, int[] Q, int[] expected) {
@@ -75,6 +78,7 @@ public class GenomicRangeQuery {
         impactFactors.put('T', 4);
     }
 
+//    https://codility.com/demo/results/demoH7PC3M-KKV/
     public int[] solution(String S, int[] P, int[] Q) {
 
         int[] counters = new int[impactFactors.size()];
@@ -95,11 +99,11 @@ public class GenomicRangeQuery {
 
             if (p == q || p == q-1) {
 
-                result[i] = impactFactors.get(S.charAt(P[i]));
+                result[i] = Math.min(impactFactors.get(S.charAt(p)), impactFactors.get(S.charAt(q)));
 
             } else {
 
-                int[] from = byIndexPrefixCount[p];
+                int[] from = byIndexPrefixCount[Math.max(0, p-1)];
                 int[] to = q == byIndexPrefixCount.length ? counters : byIndexPrefixCount[q];
 
                 int j = 0;
