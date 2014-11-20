@@ -35,12 +35,11 @@ public class NumberOfDiscIntersections {
 		int open = 0;
 		int intersections = 0;
 		
-		for (int i = 0; i < timeLine.length; i++) {
+		for (int i = 0; i < timeLine.length; i++)
 			if (timeLine[i])
 				intersections += open++;
 			else
 				open--;
-		}
 
 		return intersections > 10000000 ? -1 : intersections;
     }

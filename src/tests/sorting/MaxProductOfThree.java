@@ -10,6 +10,6 @@ public class MaxProductOfThree {
 		
 		int first = A[0]*A[1]*A[A.length-1];
 		int second = A[A.length-1]*A[A.length-2]*A[A.length-3];
-		return (first>second) ? first : second;
+		return Math.max(first,second);
     }
 }
